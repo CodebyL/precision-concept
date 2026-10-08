@@ -194,8 +194,8 @@ footer .dis{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--line
 .js .hero.in h1 .l>span{transform:none}
 .js .shot .f{clip-path:polygon(0 0,0 0,0 0,0 100%,0 100%,0 100%);transition:clip-path 1.2s var(--ease) .45s}
 .js .hero.in .shot .f{clip-path:polygon(0 0,calc(100% - 44px) 0,100% 44px,100% 100%,44px 100%,0 calc(100% - 44px))}
-.js h2[data-wipe]{background:linear-gradient(90deg,currentColor 50%,rgba(128,128,128,.25) 50%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;transition:background-position 1.3s var(--ease)}
-.js h2[data-wipe].in{background-position:0 0}
+.js h2[data-wipe]{opacity:.25;transition:opacity 1s var(--ease)}
+.js h2[data-wipe].in{opacity:1}
 @media(prefers-reduced-motion:reduce){
   .js .rv,.js .hero h1 .l>span{opacity:1;transform:none;transition:none}
   .js .shot .f{clip-path:polygon(0 0,calc(100% - 44px) 0,100% 44px,100% 100%,44px 100%,0 calc(100% - 44px));transition:none}
@@ -219,7 +219,6 @@ footer .dis{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--line
 
 <main id="main" tabindex="-1">
 <section class="hero" id="top"><div class="wrap">
-  <p class="mono">235 S Broadway, Hicksville</p>
   <h1><span class="l"><span style="--d:0">Take care</span></span><span class="l"><span style="--d:1">of your</span></span><span class="l"><span class="out" style="--d:2">car.</span></span></h1>
   <div class="row">
     <p class="sub rv" style="--d:5">Repairs, oil changes, brakes, tires and N.Y.S. inspections on South Broadway.</p>
