@@ -162,6 +162,12 @@ h2{font-size:clamp(2.6rem,8vw,5.6rem)}
 .on-y .kick::before{background:var(--ink);color:var(--y)}
 .tk{display:grid;gap:2.2rem;align-items:start}
 @media(min-width:940px){.tk{grid-template-columns:.8fr 1.2fr;gap:3.5rem}}
+.tk-l>p{margin-bottom:1.6rem}
+.tk-next{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.tk-next li{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:center;padding:.75rem 0;border-bottom:2px solid var(--ink);font-size:1rem;font-weight:500;line-height:1.35}
+.tk-next b{background:var(--ink);color:var(--y);font-size:.8rem;padding:.3rem .5rem;letter-spacing:.08em}
+@media(min-width:940px){.tk{align-items:stretch}.tk-l{display:flex;flex-direction:column}.tk-next{margin-top:auto}.ticket{display:flex;flex-direction:column}.ticket form{flex:1;grid-template-rows:auto auto 1fr auto auto}.ticket form>label:has(textarea){grid-template-rows:auto 1fr}.ticket textarea{height:100%}}
+
 .ticket{background:#fffdf4;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--ink);position:relative}
 .ticket .top{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 1.1rem;border-bottom:2px dashed var(--ink)}
 .ticket form{padding:1.2rem 1.1rem 1.3rem;display:grid;gap:.9rem}
@@ -288,10 +294,15 @@ footer .dis{margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--line
 </div></section>
 
 <section class="sec on-y" id="book" tabindex="-1"><div class="wrap tk">
-  <div>
+  <div class="tk-l">
     <p class="mono kick" data-n="04">Appointment</p>
     <h2 data-wipe>Tell us what it needs.</h2>
     <p class="rv" style="margin-top:1rem;max-width:36ch;font-size:1.1rem">Send a request and the shop calls you back to set a time. Or just call <a href="tel:+15164336464" style="font-weight:600">516-433-6464</a>.</p>
+    <ol class="tk-next rv" style="--d:2">
+      <li><b class="mono">01</b><span>Send the request with your car and the problem.</span></li>
+      <li><b class="mono">02</b><span>The shop calls you back to set a time.</span></li>
+      <li><b class="mono">03</b><span>Bring it to 235 S Broadway, Monday to Saturday.</span></li>
+    </ol>
   </div>
   <div class="ticket rv" style="--d:1">
     <div class="top mono"><span>Work order request</span><span>Demo</span></div>
