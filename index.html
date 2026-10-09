@@ -82,7 +82,14 @@ h2{font-size:clamp(2.6rem,8vw,5.6rem)}
 .shot .now{position:absolute;right:clamp(.6rem,3vw,2rem);top:-1.2rem;background:var(--k);border:2px solid var(--y);padding:.7rem 1rem;z-index:3;display:grid;gap:.1rem}
 .shot .now b{font-family:var(--disp);font-size:1.5rem;line-height:1;text-transform:uppercase}
 .shot .now span{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--y)}
-@media(min-width:880px){.hero .row{grid-template-columns:1fr auto}}
+@media(min-width:880px){
+ .hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);grid-template-rows:auto auto;column-gap:clamp(2.2rem,4.5vw,4.5rem);align-items:center;padding-block:clamp(3rem,6vw,5rem)}
+ .hero h1{grid-column:1;grid-row:1;font-size:clamp(4.4rem,9.2vw,9rem);align-self:end}
+ .hero .row{grid-column:1;grid-row:2;align-self:start;margin-top:clamp(1.4rem,2.4vw,2rem)}
+ .hero p.sub{font-size:1.2rem}
+ .shot{grid-column:2;grid-row:1/3;margin-top:0}
+ .shot .f{aspect-ratio:4/3.5}
+}
 @media(max-width:620px){.shot .f{aspect-ratio:4/3.2;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,26px 100%,0 calc(100% - 26px))}.hero h1 .out{-webkit-text-stroke-width:1.5px}}
 
 /* ticker */
@@ -118,7 +125,15 @@ h2{font-size:clamp(2.6rem,8vw,5.6rem)}
 .paper .kick{color:var(--ink)}
 .paper .kick::before{background:var(--ink);color:var(--y)}
 .why{display:grid;gap:2.4rem;align-items:start}
-@media(min-width:900px){.why{grid-template-columns:1.05fr .95fr;gap:4rem}}
+@media(min-width:900px){
+ .why{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:clamp(2.4rem,5vw,4.5rem);row-gap:0;align-items:center}
+ .why>div{display:contents}
+ .why .kick{grid-column:1;grid-row:1;align-self:end}.why h2{grid-column:1;grid-row:2;align-self:start}
+ .why h2{margin-top:0}
+ .why .awn{grid-column:2;grid-row:1/3;align-self:center;max-width:620px;justify-self:end;width:100%}
+ .why .signs{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(2.2rem,4vw,3.2rem)}
+ .why .signs li{padding:1.1rem 1.2rem}
+}
 .why h2 .hl{background:var(--y);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .signs{display:grid;gap:.8rem;margin-top:1.8rem}
 .signs li{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:center;border:2px solid var(--ink);padding:.9rem 1rem;background:#fff}
